@@ -164,7 +164,12 @@ namespace Graph_3D
                     break;
             }
         }
-        
+
+        /// <summary>
+        /// Визивається кожен раз при необхідності перемалювати графік
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlotPicBox_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -381,7 +386,7 @@ namespace Graph_3D
         }
 
         /// <summary>
-        /// Зиіна форми вказівника мишки в залежності від того де вона знаходиться
+        /// Зміна форми вказівника мишки в залежності від того де вона знаходиться
         /// </summary>
         /// <param name="picB">Область зображенння над якою знаходиться мишка</param>
         private void MouseForm(PictureBox picB)
@@ -462,7 +467,7 @@ namespace Graph_3D
         }
 
         /// <summary>
-        /// Мініємо курсор, якщо мишка входить в область елемента
+        /// Змініємо курсор, якщо мишка входить в область елемента
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -512,6 +517,66 @@ namespace Graph_3D
 
             // збереження координат мишки
             MouseSave(e, trkElevation, trkAzimuth);
+        }
+
+        /// <summary>
+        /// Подія при прокрутці колеса мишки над даним елементом
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PlotPicBox_MouseWheel(object sender, MouseEventArgs e)
+        {
+            #region help
+            // https://docs.microsoft.com/ru-ru/dotnet/api/system.windows.forms.control.mousewheel?view=netcore-3.1 
+            #endregion
+
+            switch (ModifierKeys)
+            {
+                case Keys.Shift:
+                    MouseScroll(trkElevation, e, 180);
+                    
+                    // записуємо дані
+                    tbElevation.Text = trkElevation.Value.ToString();
+                    break;
+                case Keys.Control:
+                    MouseScroll(trkAzimuth, e, 90);
+
+                    // записуємо дані
+                    tbAzimuth.Text = trkAzimuth.Value.ToString();
+                    break;
+            }
+
+            // Примітка. Використаня Alt визиває ссилку на меню (воно зазвичай виділяється і деякі букви підсвічуються),
+            // тому після її затиснення, і натискання іншої клавіші (наприклад Shift) поворот може не спрацьовувати
+            // доки не буде зроблення скидання виклику меню
+
+            // оновлення області для відобрадення маркера
+            plotPicBox.Refresh();
+        }
+
+        /// <summary>
+        /// Обробка обертання колеса мишки
+        /// </summary>
+        /// <param name="angle">Кут за яким відбуватиметься оберт</param>
+        /// <param name="e">Доступ до параметрів мишки</param>
+        /// <param name="limit">Обмеженя на відповідний кут</param>
+        private void MouseScroll(TrackBar angle, MouseEventArgs e, int limit)
+        {
+            // коефіцієнт прокрутки колеса
+            int k_w = 120 * 3;
+
+            // кількість ліній прокрутки
+            int lines = e.Delta * SystemInformation.MouseWheelScrollLines / k_w;
+            
+            // ділення керує чутливістю переміщення
+            int dz = angle.Value + lines;
+
+            if (dz < -Math.Abs(limit))
+                dz = -Math.Abs(limit);
+            else if (dz > Math.Abs(limit))
+                dz = Math.Abs(limit);
+
+            angle.Value = dz;
         }
 
         private void Graph0ToolStripMenuItem_Click(object sender, EventArgs e)

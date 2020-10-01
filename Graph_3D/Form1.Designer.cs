@@ -1,4 +1,7 @@
-﻿namespace Graph_3D
+﻿using System;
+using System.Windows.Forms;
+
+namespace Graph_3D
 {
     partial class Form1
     {
@@ -81,6 +84,7 @@
             this.spectrumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolSSL = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -111,9 +115,9 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox1.Location = new System.Drawing.Point(2, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(399, 78);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -126,9 +130,9 @@
             this.groupBox6.Controls.Add(this.tbElevation);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox6.Location = new System.Drawing.Point(298, 17);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(84, 57);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
@@ -139,7 +143,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.tbElevation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbElevation.Location = new System.Drawing.Point(4, 19);
-            this.tbElevation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbElevation.Margin = new System.Windows.Forms.Padding(2);
             this.tbElevation.Name = "tbElevation";
             this.tbElevation.Size = new System.Drawing.Size(76, 23);
             this.tbElevation.TabIndex = 4;
@@ -152,9 +156,9 @@
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox5.Location = new System.Drawing.Point(266, 17);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(32, 57);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
@@ -179,9 +183,9 @@
             this.groupBox4.Controls.Add(this.trkElevation);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox4.Location = new System.Drawing.Point(38, 17);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(228, 57);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
@@ -190,7 +194,7 @@
             // 
             this.trkElevation.Dock = System.Windows.Forms.DockStyle.Top;
             this.trkElevation.Location = new System.Drawing.Point(2, 15);
-            this.trkElevation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trkElevation.Margin = new System.Windows.Forms.Padding(2);
             this.trkElevation.Maximum = 90;
             this.trkElevation.Minimum = -90;
             this.trkElevation.Name = "trkElevation";
@@ -207,9 +211,9 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox3.Location = new System.Drawing.Point(4, 17);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(34, 57);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
@@ -238,9 +242,9 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox2.Location = new System.Drawing.Point(2, 93);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(399, 78);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -253,9 +257,9 @@
             this.groupBox7.Controls.Add(this.tbAzimuth);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox7.Location = new System.Drawing.Point(311, 17);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(84, 57);
             this.groupBox7.TabIndex = 9;
             this.groupBox7.TabStop = false;
@@ -266,7 +270,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.tbAzimuth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbAzimuth.Location = new System.Drawing.Point(4, 19);
-            this.tbAzimuth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAzimuth.Margin = new System.Windows.Forms.Padding(2);
             this.tbAzimuth.Name = "tbAzimuth";
             this.tbAzimuth.Size = new System.Drawing.Size(76, 23);
             this.tbAzimuth.TabIndex = 4;
@@ -280,9 +284,9 @@
             this.groupBox8.Controls.Add(this.label3);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox8.Location = new System.Drawing.Point(274, 17);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(37, 57);
             this.groupBox8.TabIndex = 8;
             this.groupBox8.TabStop = false;
@@ -307,9 +311,9 @@
             this.groupBox9.Controls.Add(this.trkAzimuth);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox9.Location = new System.Drawing.Point(46, 17);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox9.Size = new System.Drawing.Size(228, 57);
             this.groupBox9.TabIndex = 7;
             this.groupBox9.TabStop = false;
@@ -318,7 +322,7 @@
             // 
             this.trkAzimuth.Dock = System.Windows.Forms.DockStyle.Top;
             this.trkAzimuth.Location = new System.Drawing.Point(2, 15);
-            this.trkAzimuth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trkAzimuth.Margin = new System.Windows.Forms.Padding(2);
             this.trkAzimuth.Maximum = 180;
             this.trkAzimuth.Minimum = -180;
             this.trkAzimuth.Name = "trkAzimuth";
@@ -335,9 +339,9 @@
             this.groupBox10.Controls.Add(this.label4);
             this.groupBox10.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox10.Location = new System.Drawing.Point(4, 17);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox10.Size = new System.Drawing.Size(42, 57);
             this.groupBox10.TabIndex = 5;
             this.groupBox10.TabStop = false;
@@ -366,9 +370,9 @@
             this.groupBox11.Controls.Add(this.groupBox1);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox11.Location = new System.Drawing.Point(4, 216);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox11.Size = new System.Drawing.Size(403, 214);
             this.groupBox11.TabIndex = 3;
             this.groupBox11.TabStop = false;
@@ -393,7 +397,7 @@
             // 
             this.btUpdate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btUpdate.Location = new System.Drawing.Point(2, 171);
-            this.btUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(399, 41);
             this.btUpdate.TabIndex = 3;
@@ -407,7 +411,7 @@
             this.plotPicBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.plotPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plotPicBox.Location = new System.Drawing.Point(2, 2);
-            this.plotPicBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.plotPicBox.Margin = new System.Windows.Forms.Padding(2);
             this.plotPicBox.Name = "plotPicBox";
             this.plotPicBox.Size = new System.Drawing.Size(391, 182);
             this.plotPicBox.TabIndex = 4;
@@ -419,6 +423,7 @@
             this.plotPicBox.MouseLeave += new System.EventHandler(this.PlotPicBox_MouseLeave);
             this.plotPicBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PlotPicBox_MouseMove);
             this.plotPicBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PlotPicBox_MouseUp);
+            this.plotPicBox.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.PlotPicBox_MouseWheel);
             // 
             // tabControl1
             // 
@@ -426,7 +431,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(4, 4);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(403, 212);
@@ -437,9 +442,9 @@
             // 
             this.tabPage1.Controls.Add(this.plotPicBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(395, 186);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "PictureBox";
@@ -449,10 +454,10 @@
             // 
             this.tabPage2.Controls.Add(this.plotPanel);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(396, 189);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(395, 186);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Panel";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -462,9 +467,9 @@
             this.plotPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.plotPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plotPanel.Location = new System.Drawing.Point(2, 2);
-            this.plotPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.plotPanel.Margin = new System.Windows.Forms.Padding(2);
             this.plotPanel.Name = "plotPanel";
-            this.plotPanel.Size = new System.Drawing.Size(392, 185);
+            this.plotPanel.Size = new System.Drawing.Size(391, 182);
             this.plotPanel.TabIndex = 0;
             this.plotPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PlotPicBox_Paint);
             // 
@@ -474,7 +479,8 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSplitButton2,
             this.toolStripSplitButton1,
-            this.toolStripStatusLabel1});
+            this.toolStripStatusLabel1,
+            this.toolSSL});
             this.statusStrip1.Location = new System.Drawing.Point(4, 430);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(403, 26);
@@ -664,6 +670,16 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(173, 21);
             this.toolStripStatusLabel1.Text = "Developed by Bogdan Pinchuk";
             // 
+            // toolSSL
+            // 
+            this.toolSSL.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
+            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.toolSSL.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenOuter;
+            this.toolSSL.Name = "toolSSL";
+            this.toolSSL.Size = new System.Drawing.Size(17, 21);
+            this.toolSSL.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -675,9 +691,9 @@
             this.Controls.Add(this.statusStrip1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Padding = new System.Windows.Forms.Padding(4);
             this.Text = "Мій експеремент (література: Jack Xu 2007 Practical C# Charts and Graphics)";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -769,6 +785,7 @@
         private System.Windows.Forms.ToolStripMenuItem viridisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spectrumToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
+        private ToolStripStatusLabel toolSSL;
     }
 }
 
